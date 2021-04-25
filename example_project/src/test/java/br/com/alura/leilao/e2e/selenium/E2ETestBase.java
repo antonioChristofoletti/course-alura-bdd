@@ -31,14 +31,14 @@ public class E2ETestBase {
 	
 	@BeforeEach
 	public void setUp() {
-        driver.get("http://localhost:8080/db/seed");
+        driver.get("http://localhost:8090/db/seed");
 	}
 
 
 
 	@AfterEach
 	public void cleanUp() {
-        driver.get("http://localhost:8080/db/limpa");
+        driver.get("http://localhost:8090/db/limpa");
 		driver.manage().deleteAllCookies();
 	}
 

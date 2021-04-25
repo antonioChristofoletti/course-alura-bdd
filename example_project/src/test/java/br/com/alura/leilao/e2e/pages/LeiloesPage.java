@@ -11,7 +11,7 @@ public class LeiloesPage {
 
 	private WebDriver driver;
 
-	private static String PAGE_URL = "http://localhost:8080/leiloes";
+	private static String PAGE_URL = "http://localhost:8090/leiloes";
 	
 	public LeiloesPage(WebDriver driver) {
 		this.driver = driver;
@@ -21,9 +21,11 @@ public class LeiloesPage {
 		driver.get(PAGE_URL);
 	}
 
-	public boolean existe(String nomeProduto, String valor, String usuario) {
-		return driver.getCurrentUrl().endsWith("/leiloes") && driver.getPageSource().contains(nomeProduto) && 
-				driver.getPageSource().contains(valor);
+	public boolean existe(String nomeLeilao, String valor, String data, String usuario) {
+		return driver.getPageSource().contains(nomeLeilao) &&
+				driver.getPageSource().contains(valor) &&
+				driver.getPageSource().contains(data) &&
+				driver.getPageSource().contains(usuario);
 	}
 
 	public NovoLeilaoPage visitaPaginaParaCriarUmNovoLeilao() {
@@ -75,5 +77,15 @@ public class LeiloesPage {
 		WebElement href = driver.findElement(
 				By.xpath("//table[@class='table table-hover']/tbody/tr/td[contains(text(),'" +donoDoLeilao+ "')]/following-sibling::td/a"));
 		return href.getText().contains("editar");
+	}
+
+	public boolean estaNaPaginaDeLeiloes() {
+		this.esperaCarregarPaginaDeLeiloes();
+		return this.driver.getCurrentUrl().endsWith("/leiloes");
+	}
+
+	public void esperaCarregarPaginaDeLeiloes() {
+		WebDriverWait wait = new WebDriverWait(driver,10);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//h1[contains(text(),'Todos leilões')]")));
 	}
 }

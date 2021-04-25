@@ -2,29 +2,30 @@
 
 # BDD
 
-## What is It
+## What is It?
 
-It is a software development technic that the idea is that the whole team has a common language to discuss and document the behavios, rules and acceptance scenarios related to the software features.
+It is a software development technic in which the idea is that the whole team uses a common language to discuss and document the behaviors, rules and acceptance scenarios related to the software features.
 
-It is a complement to the TDD for the developers.
+Reunite the technical team and non technical team in order to define behaviors nd key points of the application, and then, start the developement.
 
+The BDD scenarios can be use in the TDD and test automation.
 
 ## Motivation:
 
 - Improve and make easier the communication between the team;
+- Make a software demands people with different backgrounds and this can be make the communication hard;
 - Help the whole team understand the rules and behaviors of the system.
 
 ## How to use
 
 -> Discovery;
--> Document;
--> Automatic;
+-> Document (Acceptance Criteria Given-When-Then);
+-> Automatization (Cucumber, Gerkin, TDD);
+-> Validate.
 
 ## Cucumber
 
-QA Tool that allow to acceptance scenarios in a higher level with the whole team, for example, and then code the automazided test with JUnit.
-
-It has a web platform and libraries (dependencies) for the application. So It is possible integrate the acceptance scenarios.
+BDD Tool that helps creating BDD scenarios, documentation and automatization of them.
 
 # Tests
 
