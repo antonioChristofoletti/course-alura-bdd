@@ -18,10 +18,10 @@ The BDD scenarios can be use in the TDD and test automation.
 
 ## How to use
 
--> Discovery;
--> Document (Acceptance Criteria Given-When-Then);
--> Automatization (Cucumber, Gerkin, TDD);
--> Validate.
+- Discovery;
+- Document (Acceptance Criteria Given-When-Then);
+- Automatization (Cucumber, Gerkin, TDD);
+- Validate.
 
 ## Cucumber
 
