@@ -6,7 +6,7 @@ Learning more about BDD
 
 ## My Notes
 
-- [Notes](https://github.com/antonioChristofoletti/course-alura-tdd-java/blob/main/myNotes.md)
+- [Notes](https://github.com/antonioChristofoletti/course-alura-bdd/blob/main/myNotes.md)
 
 ## Used Technologies
 
